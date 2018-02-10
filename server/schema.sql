@@ -34,8 +34,8 @@ USE chat12;
     
 CREATE TABLE messages (
   id INTEGER(11) PRIMARY KEY,
-  username VARCHAR(255),
-  roomname VARCHAR(255),
+  username INTEGER(11),
+  roomname INTEGER(11),
   createdAt VARCHAR(255),
   changedAt VARCHAR(255),
   text VARCHAR(255)
@@ -65,7 +65,8 @@ CREATE TABLE rooms (
 -- ---
 -- Foreign Keys 
 -- ---
-
+ALTER TABLE messages ADD FOREIGN KEY (username) REFERENCES users (id);
+ALTER TABLE messages ADD FOREIGN KEY (roomname) REFERENCES rooms (id);
 -- ALTER TABLE messages ADD  (username) REFERENCES users (id);
 -- ALTER TABLE messages ADD FOREIGN KEY (roomname) REFERENCES rooms (id);
 
