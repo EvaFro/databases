@@ -34,8 +34,8 @@ USE chat12;
     
 CREATE TABLE messages (
   id INTEGER(11) PRIMARY KEY,
-  username INTEGER(11),
-  roomname INTEGER(11),
+  user INTEGER(11),
+  room INTEGER(11),
   createdAt VARCHAR(255),
   changedAt VARCHAR(255),
   text VARCHAR(255)
